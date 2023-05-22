@@ -10,7 +10,7 @@ import { AyudaComponent} from './components/ayuda/ayuda.component';
 import { EmergenciaComponent } from './components/emergencia/emergencia.component';
 import {EmergenciaLoginComponent} from './components/emergencia-login/emergencia-login.component';
 import {UbicacionComponent} from './components/ubicacion/ubicacion.component';
-
+import { GithubComponent } from './components/github/github.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -22,7 +22,8 @@ const routes: Routes = [
   { path: 'ayuda', component:AyudaComponent},
   { path: 'emergencia', component:EmergenciaComponent },
   {path: 'emergencia-login', component:EmergenciaLoginComponent},
-  {path: 'ubicacion', component : UbicacionComponent}
+  {path: 'ubicacion', component : UbicacionComponent},
+  {path : 'git', component: GithubComponent}
 ];
 
 @NgModule({

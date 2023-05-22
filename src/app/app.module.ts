@@ -29,6 +29,7 @@ import { EmergenciaComponent } from './components/emergencia/emergencia.componen
 import { CallNumber } from '@ionic-native/call-number/ngx';
 import { EmergenciaLoginComponent } from './components/emergencia-login/emergencia-login.component';
 import { UbicacionComponent } from './components/ubicacion/ubicacion.component';
+import { GithubComponent } from './components/github/github.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { UbicacionComponent } from './components/ubicacion/ubicacion.component';
     EmergenciaComponent,
     EmergenciaLoginComponent,
     UbicacionComponent,
+    GithubComponent,
   ],
   imports: [
     BrowserModule,
