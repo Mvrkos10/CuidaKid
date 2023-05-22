@@ -1,0 +1,23 @@
+ion-toolbar{
+  background-color: #eb9b14;
+  text-align: center;
+}
+
+ion-button {
+  border-radius: 20px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 2px;
+  background-color: lightgray;
+}
+
+.divider p {
+  margin: 0 auto;
+  color: lightgray;
+}
+
+

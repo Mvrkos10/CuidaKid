@@ -1,0 +1,434 @@
+<ion-header>
+  <ion-toolbar color="#eb9b14">
+    <ion-buttons>
+      <ion-back-button defaultHref="/dashboard" color="light" ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2 align="center">¿Que Hacer En Caso De...? </h2>
+  <br>
+  <ion-button class="boton-ampliado" expand="block" color="dark" fill="outline" (click)="setOpen(true)">Intoxicación por productos de limpieza</ion-button>
+    <ion-modal [isOpen]="isModalOpen">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar color="#eb9b14">
+            <ion-buttons slot="start">
+              <ion-button color="light" (click)="setOpen(false)">Cerrar</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+
+          <ion-card>
+
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-button (click)="increaseFontSize()" color="dark" fill="outline" expand="block">
+                    <ion-icon name="add-outline"></ion-icon>
+                    A
+                  </ion-button>
+                </ion-col>
+
+                <ion-col>
+                  <ion-button (click)="decreaseFontSize()" color="dark" fill="outline" expand="block">
+                    <ion-icon name="remove-outline"></ion-icon>
+                    D
+                  </ion-button>
+                </ion-col>
+
+                <ion-col>
+                  <ion-button (click)="resetFontSize()" color="dark" fill="outline" expand="block">
+                    <ion-icon name="refresh-outline"></ion-icon>
+                    R
+                  </ion-button>
+                </ion-col>
+
+              </ion-row>
+            </ion-grid>
+
+            <ion-card-header>
+              <ion-card-title>Intoxicación por productos de limpieza</ion-card-title>
+            </ion-card-header>
+
+
+            <ion-card-content [style.fontSize]="fontSize + 'px'">
+              Si el niño ha ingerido un producto de limpieza, llama de inmediato al Centro de Toxicología de tu país o al servicio de emergencias de tu localidad.
+              No provoques el vómito, ya que algunos productos pueden ser dañinos si se vuelven a ingerir.
+              Si el niño tiene una quemadura en la boca o en la piel, enjuaga la zona afectada con agua durante al menos 20 minutos.
+              Mantén al niño en un lugar ventilado y alejado del producto de limpieza.
+              No administres ningún tipo de medicamento sin consultar con un médico.
+            </ion-card-content>
+
+          </ion-card>
+
+
+          <ion-card>
+
+            <ion-card-header>Audio Ayuda</ion-card-header>
+          <audio controls class="audio-player">
+            <source src="./../../../assets/Audios de cuidakids/intoxicacion-por-productos-de-limpieza_1.mp3" type="audio/mpeg">
+            Tu navegador no soporta la etiqueta de audio.
+          </audio>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>Video Referencia</ion-card-header>
+          <video class="video-player" controls>
+            <source src="./../../../assets/Videos de CuidaKids/intoxicacion-por-productos-de-limpieza.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+          </video>
+        </ion-card>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+
+  <br>
+  <ion-button class="boton-ampliado" expand="block" color="dark" fill="outline" (click)="setOpen2(true)">Asfixia</ion-button>
+    <ion-modal [isOpen]="isModalOpen2">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar color="#eb9b14">
+            <ion-buttons slot="start">
+              <ion-button color="light" (click)="setOpen2(false)">Cerrar</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+
+          <ion-card>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-button (click)="increaseFontSize()" color="dark" fill="outline" expand="block">
+                    <ion-icon name="add-outline"></ion-icon>
+                    A
+                  </ion-button>
+                </ion-col>
+
+                <ion-col>
+                  <ion-button (click)="decreaseFontSize()" color="dark" fill="outline" expand="block">
+                    <ion-icon name="remove-outline"></ion-icon>
+                    D
+                  </ion-button>
+                </ion-col>
+
+                <ion-col>
+                  <ion-button (click)="resetFontSize()" color="dark" fill="outline" expand="block">
+                    <ion-icon name="refresh-outline"></ion-icon>
+                    R
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            <ion-card-header>
+              <ion-card-title>Asfixia</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content [style.fontSize]="fontSize + 'px'">
+              Si el niño presenta una obstrucción en la vía respiratoria, no lo golpees en la espalda ni en el pecho.
+              Si el niño está consciente, pídele que tosa o toca su abdomen y tórax para ayudar a liberar la obstrucción.
+              Si el niño no puede toser o respirar, llama de inmediato al servicio de emergencias y realiza la maniobra de Heimlich. Si no estás familiarizado con esta maniobra, es importante que consultes con un profesional de la salud.
+            </ion-card-content>
+
+          </ion-card>
+
+
+          <ion-card>
+            <ion-card-header>Audio Ayuda</ion-card-header>
+          <audio controls class="audio-player">
+            <source src="./../../../assets/Audios de cuidakids/asfixia.mp3" type="audio/mpeg">
+            Tu navegador no soporta la etiqueta de audio.
+          </audio>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>Video Referencia</ion-card-header>
+          <video class="video-player" controls>
+            <source src="./../../../assets/Videos de CuidaKids/asfixia.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+          </video>
+        </ion-card>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+    <br>
+    <ion-button class="boton-ampliado" expand="block" color="dark" fill="outline" (click)="setOpen3(true)">Caída</ion-button>
+      <ion-modal [isOpen]="isModalOpen3">
+        <ng-template>
+          <ion-header>
+            <ion-toolbar color="#eb9b14">
+              <ion-buttons slot="start">
+                <ion-button color="light" (click)="setOpen3(false)">Cerrar</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="ion-padding">
+
+            <ion-card>
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <ion-button (click)="increaseFontSize()" color="dark" fill="outline" expand="block">
+                      <ion-icon name="add-outline"></ion-icon>
+                      A
+                    </ion-button>
+                  </ion-col>
+
+                  <ion-col>
+                    <ion-button (click)="decreaseFontSize()" color="dark" fill="outline" expand="block">
+                      <ion-icon name="remove-outline"></ion-icon>
+                      D
+                    </ion-button>
+                  </ion-col>
+
+                  <ion-col>
+                    <ion-button (click)="resetFontSize()" color="dark" fill="outline" expand="block">
+                      <ion-icon name="refresh-outline"></ion-icon>
+                      R
+                    </ion-button>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+              <ion-card-header>
+                <ion-card-title>Caída</ion-card-title>
+              </ion-card-header>
+
+              <ion-card-content [style.fontSize]="fontSize + 'px'">
+                Si el niño ha sufrido una caída, evalúa rápidamente la situación para determinar si necesita atención médica inmediata.
+                Si la caída es desde una altura considerable o el niño ha golpeado su cabeza, llama de inmediato al servicio de emergencias.
+                Si el niño tiene una lesión en el brazo o la pierna, intenta inmovilizar la extremidad afectada para evitar que se agrave la lesión.
+                Mantén al niño en un lugar tranquilo y cómodo.
+              </ion-card-content>
+            </ion-card>
+
+            <ion-card>
+              <ion-card-header>Audio Ayuda</ion-card-header>
+            <audio controls class="audio-player">
+              <source src="./../../../assets/Audios de cuidakids/caida.mp3" type="audio/mpeg">
+              Tu navegador no soporta la etiqueta de audio.
+            </audio>
+          </ion-card>
+          <ion-card>
+            <ion-card-header>Video Referencia</ion-card-header>
+            <video class="video-player" controls>
+              <source src="./../../../assets/Videos de CuidaKids/caida.mp4" type="video/mp4">
+              Tu navegador no soporta el elemento de video.
+            </video>
+          </ion-card>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+    <br>
+    <ion-button class="boton-ampliado" expand="block" color="dark" fill="outline" (click)="setOpen4(true)">Intoxicación de medicamentos</ion-button>
+      <ion-modal [isOpen]="isModalOpen4">
+        <ng-template>
+          <ion-header>
+            <ion-toolbar color="#eb9b14">
+              <ion-buttons slot="start">
+                <ion-button color="light" (click)="setOpen4(false)">Cerrar</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="ion-padding">
+            <ion-card>
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <ion-button (click)="increaseFontSize()" color="dark" fill="outline" expand="block">
+                      <ion-icon name="add-outline"></ion-icon>
+                      A
+                    </ion-button>
+                  </ion-col>
+
+                  <ion-col>
+                    <ion-button (click)="decreaseFontSize()" color="dark" fill="outline" expand="block">
+                      <ion-icon name="remove-outline"></ion-icon>
+                      D
+                    </ion-button>
+                  </ion-col>
+
+                  <ion-col>
+                    <ion-button (click)="resetFontSize()" color="dark" fill="outline" expand="block">
+                      <ion-icon name="refresh-outline"></ion-icon>
+                      R
+                    </ion-button>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+              <ion-card-header>
+                <ion-card-title>Intoxicación por toma accidental de medicamentos</ion-card-title>
+              </ion-card-header>
+
+              <ion-card-content [style.fontSize]="fontSize + 'px'">
+                Si el niño ha ingerido medicamentos, llama de inmediato al Centro de Toxicología de tu país o al servicio de emergencias.
+                Si el niño está consciente, pregúntale qué medicamento ha tomado y cuánto tiempo ha pasado desde que lo ingirió.
+                Si el niño ha perdido el conocimiento, no le des ningún tipo de medicamento ni provoques el vómito.
+                Mantén al niño en un lugar tranquilo y ventilado.
+              </ion-card-content>
+            </ion-card>
+
+            <ion-card>
+              <ion-card-header>
+                Audio Ayuda
+              </ion-card-header>
+
+            <audio controls class="audio-player">
+              <source src="./../../../assets/Audios de cuidakids/intoxicacion-de-medicamentos.mp3" type="audio/mpeg">
+              Tu navegador no soporta la etiqueta de audio.
+            </audio>
+
+          </ion-card>
+
+          <ion-card>
+            <ion-card-header>
+              Video Referencia
+            </ion-card-header>
+            <video class="video-player" controls>
+              <source src="./../../../assets/Videos de CuidaKids/intoxicacion-de-medicamentos.mp4" type="video/mp4">
+              Tu navegador no soporta el elemento de video.
+            </video>
+          </ion-card>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+    <br>
+    <ion-button class="boton-ampliado" expand="block" color="dark" fill="outline" (click)="setOpen5(true)">Descarga eléctrica</ion-button>
+      <ion-modal [isOpen]="isModalOpen5">
+        <ng-template>
+          <ion-header>
+            <ion-toolbar color="#eb9b14">
+              <ion-buttons slot="start">
+                <ion-button color="light" (click)="setOpen5(false)">Cerrar</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="ion-padding">
+
+            <ion-card>
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <ion-button (click)="increaseFontSize()" color="dark" fill="outline" expand="block">
+                      <ion-icon name="add-outline"></ion-icon>
+                      A
+                    </ion-button>
+                  </ion-col>
+
+                  <ion-col>
+                    <ion-button (click)="decreaseFontSize()" color="dark" fill="outline" expand="block">
+                      <ion-icon name="remove-outline"></ion-icon>
+                      D
+                    </ion-button>
+                  </ion-col>
+
+                  <ion-col>
+                    <ion-button (click)="resetFontSize()" color="dark" fill="outline" expand="block">
+                      <ion-icon name="refresh-outline"></ion-icon>
+                      R
+                    </ion-button>
+                  </ion-col>
+                </ion-row>
+
+              </ion-grid>
+              <ion-card-header>
+                <ion-card-title>Descarga eléctrica</ion-card-title>
+              </ion-card-header>
+
+              <ion-card-content [style.fontSize]="fontSize + 'px'">
+                Si el niño ha sufrido una descarga eléctrica, desconecta inmediatamente la fuente de electricidad o corta el suministro eléctrico del lugar.
+                Si el niño no está respirando o no tiene pulso, llama de inmediato al servicio de emergencias y comienza la RCP (reanimación cardiopulmonar).
+                Si el niño está consciente, llama al servicio de emergencias y evalúa la situación para determinar si necesita atención médica inmediata.
+                Si el niño tiene una herida o quemadura visible, enjuágala con agua tibia y cúbrelo con un vendaje estéril.
+              </ion-card-content>
+            </ion-card>
+
+
+            <ion-card>
+              <ion-card-header>Audio Ayuda</ion-card-header>
+              <audio controls class="audio-player">
+                <source src="./../../../assets/Audios de cuidakids/descarga-elctrica.mp3" type="audio/mpeg">
+                Tu navegador no soporta la etiqueta de audio.
+              </audio>
+            </ion-card>
+
+            <ion-card>
+              <ion-card-header>Video Referencia</ion-card-header>
+              <video class="video-player" controls>
+                <source src="./../../../assets/Videos de CuidaKids/descarga-elctrica.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+              </video>
+            </ion-card>
+
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+    <br>
+    <ion-button class="boton-ampliado" expand="block" color="dark" fill="outline" (click)="setOpen6(true)">Quemaduras por fuego</ion-button>
+      <ion-modal [isOpen]="isModalOpen6">
+        <ng-template>
+          <ion-header>
+            <ion-toolbar color="#eb9b14">
+              <ion-buttons slot="start">
+                <ion-button color="light" (click)="setOpen6(false)">Cerrar</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content class="ion-padding">
+
+            <ion-card>
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <ion-button (click)="increaseFontSize()" color="dark" fill="outline" expand="block">
+                      <ion-icon name="add-outline"></ion-icon>
+                      A
+                    </ion-button>
+                  </ion-col>
+
+                  <ion-col>
+                    <ion-button (click)="decreaseFontSize()" color="dark" fill="outline" expand="block">
+                      <ion-icon name="remove-outline"></ion-icon>
+                      D
+                    </ion-button>
+                  </ion-col>
+
+                  <ion-col>
+                    <ion-button (click)="resetFontSize()" color="dark" fill="outline" expand="block">
+                      <ion-icon name="refresh-outline"></ion-icon>
+                      R
+                    </ion-button>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+              <ion-card-header>
+                <ion-card-title>Quemaduras por fuego</ion-card-title>
+              </ion-card-header>
+
+              <ion-card-content [style.fontSize]="fontSize + 'px'">
+                Si el niño ha sufrido una quemadura por fuego, retira inmediatamente la fuente de calor o apaga el fuego.
+                Enfría la zona afectada con agua fría durante al menos 20 minutos.
+                Si la quemadura es grave o afecta una gran área del cuerpo, llama de inmediato al servicio de emergencias.
+                Si la quemadura es leve, cubre la zona afectada con una gasa estéril y administra analgésicos para aliviar el dolor.
+              </ion-card-content>
+            </ion-card>
+
+            <ion-card>
+              <ion-card-header>Audio Ayuda</ion-card-header>
+              <audio controls class="audio-player">
+                <source src="./../../../assets/Audios de cuidakids/quemaduras-por-fuego.mp3" type="audio/mpeg">
+                Tu navegador no soporta la etiqueta de audio.
+              </audio>
+            </ion-card>
+
+            <ion-card>
+              <ion-card-header>Video Referencia</ion-card-header>
+              <video class="video-player" controls class="video-player">
+                <source src="./../../../assets/Videos de CuidaKids/quemaduras-por-fuego.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+              </video>
+            </ion-card>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+</ion-content>

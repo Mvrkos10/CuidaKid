@@ -1,0 +1,7 @@
+{
+  "name": "cuidakid",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

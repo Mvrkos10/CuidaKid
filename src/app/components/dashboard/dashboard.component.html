@@ -1,0 +1,41 @@
+  <ion-header>
+    <ion-toolbar color="#eb9b14">
+      <ion-buttons slot="start">
+        <ion-button type="button" color="light" (click)="logOut()" fill="clear">Cerrar Sesión</ion-button>
+      </ion-buttons>
+      <div align="right">
+        <img src="./../../../assets/img/CuidaKid.png" width="85px" height="85px">
+      </div>
+    </ion-toolbar>
+  </ion-header>
+
+
+    <br> <br>  <br> <br>
+
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal">Bienvenido!</h1>
+        <p class="fs-5 text-muted">{{ dataUser?.email }}</p>
+      </div>
+
+      <ion-tabs>
+
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button tab="medical-outline" routerLink="/emergencia">
+            <ion-icon name="medical-outline"></ion-icon>
+            Emergencia
+          </ion-tab-button>
+          <ion-tab-button tab="logo-github"  routerLink="/">
+            <ion-icon name="logo-github"></ion-icon>
+           Repositorio
+          </ion-tab-button>
+          <ion-tab-button tab="locate-outline"  routerLink="/ubicacion">
+            <ion-icon name="locate-outline"></ion-icon>
+            Ubicación
+          </ion-tab-button>
+          <ion-tab-button tab="help-buoy-outline" routerLink="/ayuda">
+            <ion-icon name="help-buoy-outline"></ion-icon>
+            Ayuda
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+

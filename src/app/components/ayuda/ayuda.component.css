@@ -1,0 +1,17 @@
+ion-toolbar{
+  background-color: #eb9b14;
+
+}
+.audio-player {
+  width: 100%;
+}
+.video-player {
+  width: 100%;
+}
+
+.boton-ampliado {
+  font-size: 14px; /* Ajusta el tamaño de fuente según tus necesidades */
+  width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
+  white-space: normal; /* Permite que el texto se envuelva si es necesario */
+}
+
