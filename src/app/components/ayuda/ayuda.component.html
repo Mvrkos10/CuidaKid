@@ -1,153 +1,342 @@
 <ion-header>
   <ion-toolbar color="#eb9b14">
     <ion-buttons>
-      <ion-back-button defaultHref="/dashboard" color="light" ></ion-back-button>
+      <ion-back-button defaultHref="/ayuda-apartado" color="light" ></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
-<ion-content class="ion-padding">
-  <h2 align="center">¿Que Hacer En Caso De...? </h2>
+<ion-content class="ion-padding" style="--background: #f5f5f5;">
+  <h2 align="center">¿Que Hacer En Caso De? </h2>
   <br>
-  <ion-button class="boton-ampliado" expand="block" color="dark" fill="outline" (click)="setOpen(true)">Intoxicación por productos de limpieza</ion-button>
+  <ion-button class="boton-ampliado" expand="block" color="dark" fill="outline" (click)="setOpen(true)">Intoxicación por productos Quimicos</ion-button>
     <ion-modal [isOpen]="isModalOpen">
       <ng-template>
         <ion-header>
           <ion-toolbar color="#eb9b14">
             <ion-buttons slot="start">
-              <ion-button color="light" (click)="setOpen(false)">Cerrar</ion-button>
+              <ion-button color="light" (click)="setOpen(false)">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+              </ion-button>
             </ion-buttons>
           </ion-toolbar>
         </ion-header>
         <ion-content class="ion-padding">
-
           <ion-card>
-
             <ion-grid>
               <ion-row>
                 <ion-col>
                   <ion-button (click)="increaseFontSize()" color="dark" fill="outline" expand="block">
                     <ion-icon name="add-outline"></ion-icon>
-                    A
+                    Aumentar
                   </ion-button>
                 </ion-col>
-
                 <ion-col>
                   <ion-button (click)="decreaseFontSize()" color="dark" fill="outline" expand="block">
                     <ion-icon name="remove-outline"></ion-icon>
-                    D
+                    Disminuir
                   </ion-button>
                 </ion-col>
-
                 <ion-col>
                   <ion-button (click)="resetFontSize()" color="dark" fill="outline" expand="block">
                     <ion-icon name="refresh-outline"></ion-icon>
-                    R
+                    Restablecer
                   </ion-button>
                 </ion-col>
-
               </ion-row>
             </ion-grid>
-
             <ion-card-header>
-              <ion-card-title>Intoxicación por productos de limpieza</ion-card-title>
+              <ion-card-title>Intoxicación por productos de Quimicos</ion-card-title>
             </ion-card-header>
-
-
-            <ion-card-content [style.fontSize]="fontSize + 'px'">
-              Si el niño ha ingerido un producto de limpieza, llama de inmediato al Centro de Toxicología de tu país o al servicio de emergencias de tu localidad.
-              No provoques el vómito, ya que algunos productos pueden ser dañinos si se vuelven a ingerir.
-              Si el niño tiene una quemadura en la boca o en la piel, enjuaga la zona afectada con agua durante al menos 20 minutos.
-              Mantén al niño en un lugar ventilado y alejado del producto de limpieza.
-              No administres ningún tipo de medicamento sin consultar con un médico.
-            </ion-card-content>
-
+            <ion-card-content class="ion-text-justify" [style.fontSize]="fontSize + 'px'">
+              Si un niño sufre una intoxicación por productos de Quimicos,
+              es importante actuar rápidamente.
+              <br><br>
+              1.- Retire todo lo que quede en la boca del niño.
+              <br>
+              2.- Si la sustancia tóxica es un producto de limpieza de uso doméstico u otra
+              sustancia química, se debe leer la etiqueta del recipiente y
+              seguir las instrucciones para casos de intoxicación involuntaria.
+              <br>
+              3.- Llame al número de emergencia local si el niño
+              presenta síntomas graves como dificultad para respirar o convulsiones.
+              <br><br>
+              A continuación se presentan los pasos a seguir en caso de intoxicación
+              por productos del hogar:
+              <br><br>
+              1.-Conservar la tranquilidad.
+              <br>
+              2.-No provocar el vómito.
+              <br>
+              3.-Inicialmente, no es recomendable beber agua o leche hasta que la situación
+              sea valorada por un profesional, ya que su utilidad depende de los componentes del tóxico.
+              <br>
+              4.-Quitar la ropa que esté manchada con el producto tóxico.
+              <br>
+              5.-En caso de contacto con los ojos o con la piel, lavar con abundante agua.
+              <br><br>
+              <ion-item>
+                <ion-thumbnail  slot="start">
+                  <img alt="Ambulancia" src="https://samu.cl/wp-content/uploads/2020/01/Logo-SAMU-Metropolitano.png"  class="imagen"/>
+                </ion-thumbnail >
+                <ion-label>
+                  <p>Ambulancia De Chile</p>
+                  <p>Teléfono : 131</p>
+                </ion-label>
+                <ion-button slots="end" href="tel:131" color="success">
+                  <ion-icon name="call-outline"></ion-icon>
+                </ion-button>
+              </ion-item>
+            </ion-card-content >
           </ion-card>
-
-
           <ion-card>
-
-            <ion-card-header>Audio Ayuda</ion-card-header>
-          <audio controls class="audio-player">
-            <source src="./../../../assets/Audios de cuidakids/intoxicacion-por-productos-de-limpieza_1.mp3" type="audio/mpeg">
-            Tu navegador no soporta la etiqueta de audio.
-          </audio>
+            <ion-card-header>
+              <ion-card-title>Audio de ayuda</ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="ion-text-justify">
+              <audio controls class="audio-player">
+                <source src="./../../../assets/Audios de cuidakids/IntoxicacionPorProductosQuimicos.mp3" type="audio/mpeg">
+                Tu dispositivo no soporta la etiqueta de audio.
+              </audio>
+            </ion-card-content>
         </ion-card>
         <ion-card>
-          <ion-card-header>Video Referencia</ion-card-header>
-          <video class="video-player" controls>
-            <source src="./../../../assets/Videos de CuidaKids/intoxicacion-por-productos-de-limpieza.mp4" type="video/mp4">
-            Tu navegador no soporta el elemento de video.
+          <ion-card-header>
+            <ion-card-title>Video de ayuda</ion-card-title>
+          </ion-card-header>
+          <ion-card-content class="ion-text-justify">
+            <video  controls class="video-player" poster="https://www.monumental.co.cr/wp-content/uploads/2021/12/limpieza.jpg">
+            <source src="./../../../assets/VideoAyuda.mp4" type="video/mp4">
+            Tu dispositivo no soporta el elemento de video.
           </video>
+          </ion-card-content>
         </ion-card>
         </ion-content>
       </ng-template>
     </ion-modal>
-
-  <br>
-  <ion-button class="boton-ampliado" expand="block" color="dark" fill="outline" (click)="setOpen2(true)">Asfixia</ion-button>
+    <br>
+    <ion-button class="boton-ampliado" expand="block" color="dark" fill="outline" (click)="setOpen2(true)">Asfixia</ion-button>
     <ion-modal [isOpen]="isModalOpen2">
       <ng-template>
         <ion-header>
           <ion-toolbar color="#eb9b14">
             <ion-buttons slot="start">
-              <ion-button color="light" (click)="setOpen2(false)">Cerrar</ion-button>
+              <ion-button color="light" (click)="setOpen2(false)">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+              </ion-button>
             </ion-buttons>
           </ion-toolbar>
         </ion-header>
         <ion-content class="ion-padding">
-
           <ion-card>
             <ion-grid>
               <ion-row>
                 <ion-col>
-                  <ion-button (click)="increaseFontSize()" color="dark" fill="outline" expand="block">
+                  <ion-button (click)="increaseFontSize7()" color="dark" fill="outline" expand="block">
                     <ion-icon name="add-outline"></ion-icon>
-                    A
+                    Aumentar
                   </ion-button>
                 </ion-col>
-
                 <ion-col>
-                  <ion-button (click)="decreaseFontSize()" color="dark" fill="outline" expand="block">
+                  <ion-button (click)="decreaseFontSize7()" color="dark" fill="outline" expand="block">
                     <ion-icon name="remove-outline"></ion-icon>
-                    D
+                    Disminuir
                   </ion-button>
                 </ion-col>
-
                 <ion-col>
-                  <ion-button (click)="resetFontSize()" color="dark" fill="outline" expand="block">
+                  <ion-button (click)="resetFontSize7()" color="dark" fill="outline" expand="block">
                     <ion-icon name="refresh-outline"></ion-icon>
-                    R
+                    Restablecer
                   </ion-button>
                 </ion-col>
               </ion-row>
             </ion-grid>
             <ion-card-header>
-              <ion-card-title>Asfixia</ion-card-title>
+              <ion-card-title>Asfixia en niños menores de 3 años</ion-card-title>
             </ion-card-header>
-
-            <ion-card-content [style.fontSize]="fontSize + 'px'">
-              Si el niño presenta una obstrucción en la vía respiratoria, no lo golpees en la espalda ni en el pecho.
-              Si el niño está consciente, pídele que tosa o toca su abdomen y tórax para ayudar a liberar la obstrucción.
-              Si el niño no puede toser o respirar, llama de inmediato al servicio de emergencias y realiza la maniobra de Heimlich. Si no estás familiarizado con esta maniobra, es importante que consultes con un profesional de la salud.
-            </ion-card-content>
-
+            <ion-card-content class="ion-text-justify" [style.fontSize]="fontSize7 + 'px'">
+              Si su hijo no está tosiendo con fuerza o no tiene un llanto fuerte, siga estos pasos:
+              <br><br>
+              1.- Acueste al bebé boca abajo, a lo largo de su brazo.
+              <br>
+              2.- Utilice su regazo o el muslo como apoyo.
+              <br>
+              3.- Sostenga el pecho del bebé en su mano y la mandíbula con sus dedos.
+              <br>
+              4.- Mantenga la cabeza del bebé apuntando hacia abajo, a un nivel más bajo que el cuerpo.
+              <br>
+              5.- Dé hasta 5 golpes fuertes y rápidos entre los omóplatos del bebé. Utilice la base de la
+              palma de la mano libre.
+              <br><br>
+              Si el objeto no sale de la vía respiratoria después de 5 golpes:
+              <br><br>
+              1.- Voltee al bebé boca arriba. Utilice el regazo o el muslo como soporte.
+              <br>
+              2.- Apóyele la cabeza.
+              <br>
+              3.- Coloque dos dedos en la mitad del esternón, justo por debajo de las tetillas.
+              <br>
+              4.- Practique hasta 5 compresiones rápidas hacia abajo, hundiendo el pecho hasta de un tercio
+              a la mitad de su profundidad.
+              <br>
+              5.- Continúe con 5 golpes en la espalda seguidos de 5 compresiones pectorales hasta desalojar el objeto o hasta que el bebé pierda el conocimiento (quede inconsciente).
+              <br><br>
+              Si el bebé queda inconsciente, deja de respirar o se torna de color azul:
+              <br><br>
+              1.- Grite pidiendo ayuda.
+              <br>
+              2.- Practique RCP en el bebe. Llame al número local de emergencias después de 1 minuto.
+              <br>
+              3.- Si puede ver el objeto que está obstruyendo las vías respiratorias, trate de extraerlo con el dedo.
+              (Esto puede hacerse solo si usted en verdad puede verlo)
+              <br><br>
+              <ion-item>
+                <ion-thumbnail  slot="start">
+                  <img alt="Ambulancia" src="https://samu.cl/wp-content/uploads/2020/01/Logo-SAMU-Metropolitano.png"  class="imagen"/>
+                </ion-thumbnail >
+                <ion-label>
+                  <p>Ambulancia De Chile</p>
+                  <p>Teléfono : 131</p>
+                </ion-label>
+                <ion-button slots="end" href="tel:131" color="success">
+                  <ion-icon name="call-outline"></ion-icon>
+                </ion-button>
+              </ion-item>
+            </ion-card-content >
           </ion-card>
-
-
           <ion-card>
-            <ion-card-header>Audio Ayuda</ion-card-header>
-          <audio controls class="audio-player">
-            <source src="./../../../assets/Audios de cuidakids/asfixia.mp3" type="audio/mpeg">
-            Tu navegador no soporta la etiqueta de audio.
-          </audio>
+            <ion-card-header>
+              <ion-card-title>Audio de ayuda</ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="ion-text-justify">
+              <audio controls class="audio-player">
+                <source src="./../../../assets/Audios de cuidakids/AsfixiaEnNinosMenoresDeTresAnos.mp3" type="audio/mpeg">
+                Tu dispositivo no soporta la etiqueta de audio.
+              </audio>
+            </ion-card-content >
         </ion-card>
         <ion-card>
-          <ion-card-header>Video Referencia</ion-card-header>
-          <video class="video-player" controls>
-            <source src="./../../../assets/Videos de CuidaKids/asfixia.mp4" type="video/mp4">
-            Tu navegador no soporta el elemento de video.
+          <ion-card-header>
+            <ion-card-title>Video de ayuda</ion-card-title>
+          </ion-card-header>
+          <ion-card-content class="ion-text-justify">
+            <video  controls class="video-player" poster="https://saposyprincesas.elmundo.es/wp-content/uploads/2016/02/bebe-tosiendo.jpg">
+            <source src="./../../../assets/VideoAyuda.mp4" type="video/mp4">
+            Tu dispositivo no soporta el elemento de video.
           </video>
+          </ion-card-content>
+        </ion-card>
+          <ion-card>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-button (click)="increaseFontSize2()" color="dark" fill="outline" expand="block">
+                    <ion-icon name="add-outline"></ion-icon>
+                    Aumentar
+                  </ion-button>
+                </ion-col>
+                <ion-col>
+                  <ion-button (click)="decreaseFontSize2()" color="dark" fill="outline" expand="block">
+                    <ion-icon name="remove-outline"></ion-icon>
+                    Disminuir
+                  </ion-button>
+                </ion-col>
+                <ion-col>
+                  <ion-button (click)="resetFontSize2()" color="dark" fill="outline" expand="block">
+                    <ion-icon name="refresh-outline"></ion-icon>
+                    Restablecer
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            <ion-card-header>
+              <ion-card-title>Asfixia en niño mayor de 3 años</ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="ion-text-justify" [style.fontSize]="fontSize2 + 'px'">
+              Primero pregunte: ¿Se está asfixiando? ¿Puede hablar? NO aplique primeros
+              auxilios si el niño está tosiendo con fuerza y puede hablar. Una tos
+              fuerte puede desalojar el objeto.
+              <br>
+              Aliente al niño a seguir tosiendo con el fin de desalojar el objeto.
+              <br>
+              Si el niño no puede hablar o está teniendo problemas para respirar,
+              usted debe actuar rápidamente para ayudarlo. Puede llevar
+              a cabo los empujes abdominales, los golpes en la espalda o ambos.
+              <br><br>
+              Para realizar los empujes abdominales (la maniobra de Heimlich):
+              <br><br>
+              1.- Párese detrás del y rodéela con los brazos por la cintura
+              <br>
+              2.- Forme un puño con una mano. Coloque el puño por el lado del pulgar justo encima del ombligo de la persona, bien por debajo del esternón.
+              <br>
+              3.- Agarre el puño firmemente con la otra mano.
+              <br>
+              4.- Realice una compresión rápida hacia arriba y hacia adentro con el puño.
+              <br>
+              5.- Verifique si el objeto ha salido.
+              <br>
+              6.- Continúe con dichas compresiones hasta que el objeto salga o la persona pierda el conocimiento.
+              <br>
+              <br>
+              Para realizar los golpes de espalda:
+              <br><br>
+              1.- Párese detrás de la persona. Para un niño, es posible que deba hincarse.
+              <br>
+              2.- Rodéela con un brazo para soportar el torso de la persona. Inclínela hacia
+                  adelante hasta que el pecho quede paralelo al suelo.
+              <br>
+              3.- Use la palma de su otra mano para dar un golpe firme entre los omóplatos
+                  de la persona.
+              <br>
+              4.- Verifique si el objeto ha salido.
+              <br>
+              5.- Continúe con los golpes hasta que el objeto salga o la persona pierda el
+                  conocimiento.
+              <br><br>
+              Si el niño se desmaya o pierde el conocimiento:
+              <br><br>
+              1.- Recueste al niño en el suelo.
+              <br>
+              2.- Llame al número local de emergencias  o solicítele a alguien que lo haga.
+              <br>
+              3.- Si observa algo que está obstruyendo las vías respiratorias y este objeto está suelto, trate
+              de retirarlo. Si el objeto está atorado en la garganta de la persona, NO intente sujetarlo.
+              Hacerlo puede empujar el objeto más adentro de la vía respiratoria.
+              <br><br>
+              <ion-item>
+                <ion-thumbnail  slot="start">
+                  <img alt="Ambulancia" src="https://samu.cl/wp-content/uploads/2020/01/Logo-SAMU-Metropolitano.png"  class="imagen"/>
+                </ion-thumbnail >
+                <ion-label>
+                  <p>Ambulancia De Chile</p>
+                  <p>Teléfono : 131</p>
+                </ion-label>
+                <ion-button slots="end" href="tel:131" color="success">
+                  <ion-icon name="call-outline"></ion-icon>
+                </ion-button>
+              </ion-item>
+            </ion-card-content >
+          </ion-card>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Audio de ayuda</ion-card-title>
+            </ion-card-header>
+            <ion-card-content class="ion-text-justify">
+              <audio controls class="audio-player">
+                <source src="./../../../assets/Audios de cuidakids/AsfixiaEnNinosMayoresDeTresAnos.mp3" type="audio/mpeg">
+                Tu dispositivo no soporta la etiqueta de audio.
+              </audio>
+            </ion-card-content >
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Video de ayuda</ion-card-title>
+          </ion-card-header>
+          <ion-card-content class="ion-text-justify">
+            <video  controls class="video-player" poster="https://tvcrecer.com/wp-content/uploads/2015/01/asfixia-700x466.jpg">
+            <source src="./../../../assets/VideoAyuda.mp4" type="video/mp4">
+            Tu dispositivo no soporta el elemento de video.
+          </video>
+          </ion-card-content>
         </ion-card>
         </ion-content>
       </ng-template>
@@ -159,33 +348,32 @@
           <ion-header>
             <ion-toolbar color="#eb9b14">
               <ion-buttons slot="start">
-                <ion-button color="light" (click)="setOpen3(false)">Cerrar</ion-button>
+                <ion-button color="light" (click)="setOpen3(false)">
+                  <ion-icon name="chevron-back-outline"></ion-icon>
+                </ion-button>
               </ion-buttons>
             </ion-toolbar>
           </ion-header>
           <ion-content class="ion-padding">
-
             <ion-card>
               <ion-grid>
                 <ion-row>
                   <ion-col>
-                    <ion-button (click)="increaseFontSize()" color="dark" fill="outline" expand="block">
+                    <ion-button (click)="increaseFontSize3()" color="dark" fill="outline" expand="block">
                       <ion-icon name="add-outline"></ion-icon>
-                      A
+                      Aumentar
                     </ion-button>
                   </ion-col>
-
                   <ion-col>
-                    <ion-button (click)="decreaseFontSize()" color="dark" fill="outline" expand="block">
+                    <ion-button (click)="decreaseFontSize3()" color="dark" fill="outline" expand="block">
                       <ion-icon name="remove-outline"></ion-icon>
-                      D
+                      Disminuir
                     </ion-button>
                   </ion-col>
-
                   <ion-col>
-                    <ion-button (click)="resetFontSize()" color="dark" fill="outline" expand="block">
+                    <ion-button (click)="resetFontSize3()" color="dark" fill="outline" expand="block">
                       <ion-icon name="refresh-outline"></ion-icon>
-                      R
+                      Restablecer
                     </ion-button>
                   </ion-col>
                 </ion-row>
@@ -193,29 +381,54 @@
               <ion-card-header>
                 <ion-card-title>Caída</ion-card-title>
               </ion-card-header>
-
-              <ion-card-content [style.fontSize]="fontSize + 'px'">
-                Si el niño ha sufrido una caída, evalúa rápidamente la situación para determinar si necesita atención médica inmediata.
-                Si la caída es desde una altura considerable o el niño ha golpeado su cabeza, llama de inmediato al servicio de emergencias.
-                Si el niño tiene una lesión en el brazo o la pierna, intenta inmovilizar la extremidad afectada para evitar que se agrave la lesión.
-                Mantén al niño en un lugar tranquilo y cómodo.
+              <ion-card-content class="ion-text-justify" [style.fontSize]="fontSize3 + 'px'">
+                Como en cualquier situación inesperada, conserva la calma. Alterarse no va
+                ayudar en nada a resolver lo que está sucediendo, por lo cual, si tu bebé
+                se pega en la cabeza o se cae, después del susto que te llevarás respira
+                profundamente y rápidamente acércate a él para revisarlo.
+                <br><br>
+                1.- Verifica que esté llorando, pues eso indica que sus funciones vitales están presentes.
+                <br>
+                2.- En caso de hemorragia, presiona la herida con una gasa, toalla o trapo y llame al numero de emergencias local.
+                <br>
+                3.- Si sólo hay chichón, coloca hielo sobre éste, de preferencia picado en una bolsa de plástico o en un pedazo de tela.
+                <br><br>
+                <ion-item>
+                  <ion-thumbnail  slot="start">
+                    <img alt="Ambulancia" src="https://samu.cl/wp-content/uploads/2020/01/Logo-SAMU-Metropolitano.png"  class="imagen"/>
+                  </ion-thumbnail >
+                  <ion-label>
+                    <p>Ambulancia De Chile</p>
+                    <p>Teléfono : 131</p>
+                  </ion-label>
+                  <ion-button slots="end" href="tel:131" color="success">
+                    <ion-icon name="call-outline"></ion-icon>
+                  </ion-button>
+                </ion-item>
+              </ion-card-content >
+            </ion-card>
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>Audio de ayuda</ion-card-title>
+              </ion-card-header>
+              <ion-card-content class="ion-text-justify">
+                <audio controls class="audio-player">
+                  <source src="./../../../assets/Audios de cuidakids/Caida.mp3" type="audio/mpeg">
+                  Tu dispositivo no soporta la etiqueta de audio.
+                </audio>
+              </ion-card-content >
+            </ion-card>
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>Video de ayuda</ion-card-title>
+              </ion-card-header>
+              <ion-card-content class="ion-text-justify">
+                <video  controls class="video-player" poster="https://i0.wp.com/www.palabraenfermera.enfermerianavarra.com/wp-content/uploads/2019/11/ni%C3%B1o-caida-traumatismo-craneoencef%C3%A1lico-blog.jpg?fit=1024%2C645">
+                <source src="./../../../assets/VideoAyuda.mp4" type="video/mp4">
+                Tu dispositivo no soporta el elemento de video.
+              </video>
               </ion-card-content>
             </ion-card>
-
-            <ion-card>
-              <ion-card-header>Audio Ayuda</ion-card-header>
-            <audio controls class="audio-player">
-              <source src="./../../../assets/Audios de cuidakids/caida.mp3" type="audio/mpeg">
-              Tu navegador no soporta la etiqueta de audio.
-            </audio>
-          </ion-card>
-          <ion-card>
-            <ion-card-header>Video Referencia</ion-card-header>
-            <video class="video-player" controls>
-              <source src="./../../../assets/Videos de CuidaKids/caida.mp4" type="video/mp4">
-              Tu navegador no soporta el elemento de video.
-            </video>
-          </ion-card>
           </ion-content>
         </ng-template>
       </ion-modal>
@@ -226,7 +439,9 @@
           <ion-header>
             <ion-toolbar color="#eb9b14">
               <ion-buttons slot="start">
-                <ion-button color="light" (click)="setOpen4(false)">Cerrar</ion-button>
+                <ion-button color="light" (click)="setOpen4(false)">
+                  <ion-icon name="chevron-back-outline"></ion-icon>
+                </ion-button>
               </ion-buttons>
             </ion-toolbar>
           </ion-header>
@@ -235,23 +450,21 @@
               <ion-grid>
                 <ion-row>
                   <ion-col>
-                    <ion-button (click)="increaseFontSize()" color="dark" fill="outline" expand="block">
+                    <ion-button (click)="increaseFontSize4()" color="dark" fill="outline" expand="block">
                       <ion-icon name="add-outline"></ion-icon>
-                      A
+                      Aumentar
                     </ion-button>
                   </ion-col>
-
                   <ion-col>
-                    <ion-button (click)="decreaseFontSize()" color="dark" fill="outline" expand="block">
+                    <ion-button (click)="decreaseFontSize4()" color="dark" fill="outline" expand="block">
                       <ion-icon name="remove-outline"></ion-icon>
-                      D
+                      Disminuir
                     </ion-button>
                   </ion-col>
-
                   <ion-col>
-                    <ion-button (click)="resetFontSize()" color="dark" fill="outline" expand="block">
+                    <ion-button (click)="resetFontSize4()" color="dark" fill="outline" expand="block">
                       <ion-icon name="refresh-outline"></ion-icon>
-                      R
+                      Restablecer
                     </ion-button>
                   </ion-col>
                 </ion-row>
@@ -259,36 +472,64 @@
               <ion-card-header>
                 <ion-card-title>Intoxicación por toma accidental de medicamentos</ion-card-title>
               </ion-card-header>
-
-              <ion-card-content [style.fontSize]="fontSize + 'px'">
-                Si el niño ha ingerido medicamentos, llama de inmediato al Centro de Toxicología de tu país o al servicio de emergencias.
-                Si el niño está consciente, pregúntale qué medicamento ha tomado y cuánto tiempo ha pasado desde que lo ingirió.
-                Si el niño ha perdido el conocimiento, no le des ningún tipo de medicamento ni provoques el vómito.
-                Mantén al niño en un lugar tranquilo y ventilado.
+              <ion-card-content class="ion-text-justify" [style.fontSize]="fontSize4 + 'px'">
+                En muchas ocasiones, los niños toman poca cantidad del fármaco, no se llega a la dosis
+                tóxica, y no se necesita ningún tratamiento. Sin embargo, otras veces, la ingesta
+                de un fármaco ocasiona problemas importantes porque se han ingerido mayores cantidades o
+                está implicado un medicamento muy tóxico.
+                <br>
+                <br>
+                Si un niño sufre una intoxicación por medicamentos, es importante actuar rápidamente.
+                <br>
+                <br>
+                1.- Conservar la tranquilidad.
+                <br>
+                2.- No provocar el vómito, ni administrar nada; tampoco leche.
+                <br>
+                3.- En caso de presentarse un accidente, procure atención médica lo más rápidamente posible.
+                <br>
+                4.- Diríjase al centro de atención más cercano. La rapidez es esencial en el tratamiento de cualquier caso de intoxicación.
+                Preguntarán de qué sustancia se trata, por lo que es importante tener a mano el envase del medicamento.
+                <br>
+                5.- En caso de contacto con la piel o mucosas (boca u ojos) lavar o enjuagar con agua abundante.
+                <br>
+                <br>
+                <ion-item>
+                  <ion-thumbnail  slot="start">
+                    <img alt="Ambulancia" src="https://samu.cl/wp-content/uploads/2020/01/Logo-SAMU-Metropolitano.png"  class="imagen"/>
+                  </ion-thumbnail >
+                  <ion-label>
+                    <p>Ambulancia De Chile</p>
+                    <p>Teléfono : 131</p>
+                  </ion-label>
+                  <ion-button slots="end" href="tel:131" color="success">
+                    <ion-icon name="call-outline"></ion-icon>
+                  </ion-button>
+                </ion-item>
               </ion-card-content>
             </ion-card>
-
             <ion-card>
               <ion-card-header>
-                Audio Ayuda
+                <ion-card-title>Audio de ayuda</ion-card-title>
               </ion-card-header>
-
-            <audio controls class="audio-player">
-              <source src="./../../../assets/Audios de cuidakids/intoxicacion-de-medicamentos.mp3" type="audio/mpeg">
-              Tu navegador no soporta la etiqueta de audio.
-            </audio>
-
-          </ion-card>
-
-          <ion-card>
-            <ion-card-header>
-              Video Referencia
-            </ion-card-header>
-            <video class="video-player" controls>
-              <source src="./../../../assets/Videos de CuidaKids/intoxicacion-de-medicamentos.mp4" type="video/mp4">
-              Tu navegador no soporta el elemento de video.
-            </video>
-          </ion-card>
+              <ion-card-content class="ion-text-justify">
+                <audio controls class="audio-player">
+                  <source src="./../../../assets/Audios de cuidakids/IntoxicacionPorMedicamentos.mp3" type="audio/mpeg">
+                  Tu dispositivo no soporta la etiqueta de audio.
+                </audio>
+              </ion-card-content >
+            </ion-card>
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>Video de ayuda</ion-card-title>
+              </ion-card-header>
+              <ion-card-content class="ion-text-justify">
+                <video  controls class="video-player" poster="https://www.sumedico.com/u/fotografias/m/2020/4/20/f1280x720-5386_137061_5050.jpg">
+                <source src="./../../../assets/VideoAyuda.mp4" type="video/mp4">
+                Tu dispositivo no soporta el elemento de video.
+              </video>
+              </ion-card-content>
+            </ion-card>
           </ion-content>
         </ng-template>
       </ion-modal>
@@ -299,67 +540,105 @@
           <ion-header>
             <ion-toolbar color="#eb9b14">
               <ion-buttons slot="start">
-                <ion-button color="light" (click)="setOpen5(false)">Cerrar</ion-button>
+                <ion-button color="light" (click)="setOpen5(false)">
+                  <ion-icon name="chevron-back-outline"></ion-icon>
+                </ion-button>
               </ion-buttons>
             </ion-toolbar>
           </ion-header>
           <ion-content class="ion-padding">
-
             <ion-card>
               <ion-grid>
                 <ion-row>
                   <ion-col>
-                    <ion-button (click)="increaseFontSize()" color="dark" fill="outline" expand="block">
+                    <ion-button (click)="increaseFontSize5()" color="dark" fill="outline" expand="block">
                       <ion-icon name="add-outline"></ion-icon>
-                      A
+                      Aumentar
                     </ion-button>
                   </ion-col>
-
                   <ion-col>
-                    <ion-button (click)="decreaseFontSize()" color="dark" fill="outline" expand="block">
+                    <ion-button (click)="decreaseFontSize5()" color="dark" fill="outline" expand="block">
                       <ion-icon name="remove-outline"></ion-icon>
-                      D
+                      Disminuir
                     </ion-button>
                   </ion-col>
-
                   <ion-col>
-                    <ion-button (click)="resetFontSize()" color="dark" fill="outline" expand="block">
+                    <ion-button (click)="resetFontSize5()" color="dark" fill="outline" expand="block">
                       <ion-icon name="refresh-outline"></ion-icon>
-                      R
+                      Restablecer
                     </ion-button>
                   </ion-col>
                 </ion-row>
-
               </ion-grid>
               <ion-card-header>
                 <ion-card-title>Descarga eléctrica</ion-card-title>
               </ion-card-header>
-
-              <ion-card-content [style.fontSize]="fontSize + 'px'">
-                Si el niño ha sufrido una descarga eléctrica, desconecta inmediatamente la fuente de electricidad o corta el suministro eléctrico del lugar.
-                Si el niño no está respirando o no tiene pulso, llama de inmediato al servicio de emergencias y comienza la RCP (reanimación cardiopulmonar).
-                Si el niño está consciente, llama al servicio de emergencias y evalúa la situación para determinar si necesita atención médica inmediata.
-                Si el niño tiene una herida o quemadura visible, enjuágala con agua tibia y cúbrelo con un vendaje estéril.
+              <ion-card-content class="ion-text-justify" [style.fontSize]="fontSize5 + 'px'">
+                El niño puede sufrir una descarga eléctrica cuando su cuerpo entra en contacto,
+                de forma directa o a través de un objeto metálico, con un conductor eléctrico.
+                En general, las consecuencias se limitan a un gran susto.
+                <br>
+                <br>
+                En los casos más graves, el niño puede perder la conciencia y sufrir una reducción
+                del flujo sanguíneo que los médicos llaman shock y que no hay que confundir con el susto.
+                <br>
+                <br>
+                Si el nino a sufrido una descarga electrica debes reaccionar rapido:
+                <br>
+                <br>
+                1.- Interrumpe inmediatamente la corriente eléctrica.
+                <br>
+                2.- revisa la piel del niño en la zona por donde ha pasado la corriente. Si sólo está enrojecida, hay que ponerla bajo el chorro de agua fría.
+                <br>
+                3.- Si el niño está inconsciente comprueba que respira.
+                <br>
+                <br>
+                Si el niño no respira:
+                <br>
+                <br>
+                1.- hazle el boca a boca y el masaje cardíaco.
+                <br>
+                2.- Llama al numero de memergencia local.
+                <br>
+                3.- Si respira ponle en posición de recuperación(acuesta al niño de lado con la cabeza apoyada en el brazo).
+                <br>
+                <br>
+                <ion-item>
+                  <ion-thumbnail  slot="start">
+                    <img alt="Ambulancia" src="https://samu.cl/wp-content/uploads/2020/01/Logo-SAMU-Metropolitano.png"  class="imagen"/>
+                  </ion-thumbnail >
+                  <ion-label>
+                    <p>Ambulancia De Chile</p>
+                    <p>Teléfono : 131</p>
+                  </ion-label>
+                  <ion-button slots="end" href="tel:131" color="success">
+                    <ion-icon name="call-outline"></ion-icon>
+                  </ion-button>
+                </ion-item>
               </ion-card-content>
             </ion-card>
-
-
             <ion-card>
-              <ion-card-header>Audio Ayuda</ion-card-header>
-              <audio controls class="audio-player">
-                <source src="./../../../assets/Audios de cuidakids/descarga-elctrica.mp3" type="audio/mpeg">
-                Tu navegador no soporta la etiqueta de audio.
-              </audio>
+              <ion-card-header>
+                <ion-card-title>Audio de ayuda</ion-card-title>
+              </ion-card-header>
+              <ion-card-content class="ion-text-justify">
+                <audio controls class="audio-player">
+                  <source src="./../../../assets/Audios de cuidakids/DescargaElectrica.mp3" type="audio/mpeg">
+                  Tu dispositivo no soporta la etiqueta de audio.
+                </audio>
+              </ion-card-content>
             </ion-card>
-
             <ion-card>
-              <ion-card-header>Video Referencia</ion-card-header>
-              <video class="video-player" controls>
-                <source src="./../../../assets/Videos de CuidaKids/descarga-elctrica.mp4" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
+              <ion-card-header>
+                <ion-card-title>Video de ayuda</ion-card-title>
+              </ion-card-header>
+              <ion-card-content class="ion-text-justify">
+                <video  controls class="video-player" poster="data:image/jpeg;base64,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">
+                <source src="./../../../assets/VideoAyuda.mp4" type="video/mp4">
+                Tu dispositivo no soporta el elemento de video.
               </video>
+              </ion-card-content>
             </ion-card>
-
           </ion-content>
         </ng-template>
       </ion-modal>
@@ -370,63 +649,282 @@
           <ion-header>
             <ion-toolbar color="#eb9b14">
               <ion-buttons slot="start">
-                <ion-button color="light" (click)="setOpen6(false)">Cerrar</ion-button>
+                <ion-button color="light" (click)="setOpen6(false)">
+                  <ion-icon name="chevron-back-outline"></ion-icon>
+                </ion-button>
               </ion-buttons>
             </ion-toolbar>
           </ion-header>
           <ion-content class="ion-padding">
-
             <ion-card>
               <ion-grid>
                 <ion-row>
                   <ion-col>
-                    <ion-button (click)="increaseFontSize()" color="dark" fill="outline" expand="block">
+                    <ion-button (click)="increaseFontSize6()" color="dark" fill="outline" expand="block">
                       <ion-icon name="add-outline"></ion-icon>
-                      A
+                      Aumentar
                     </ion-button>
                   </ion-col>
-
                   <ion-col>
-                    <ion-button (click)="decreaseFontSize()" color="dark" fill="outline" expand="block">
+                    <ion-button (click)="decreaseFontSize6()" color="dark" fill="outline" expand="block">
                       <ion-icon name="remove-outline"></ion-icon>
-                      D
+                      Disminuir
                     </ion-button>
                   </ion-col>
-
                   <ion-col>
-                    <ion-button (click)="resetFontSize()" color="dark" fill="outline" expand="block">
+                    <ion-button (click)="resetFontSize6()" color="dark" fill="outline" expand="block">
                       <ion-icon name="refresh-outline"></ion-icon>
-                      R
+                      Restablecer
                     </ion-button>
                   </ion-col>
                 </ion-row>
               </ion-grid>
               <ion-card-header>
-                <ion-card-title>Quemaduras por fuego</ion-card-title>
+                <ion-card-title>Quemaduras de primer grado</ion-card-title>
               </ion-card-header>
-
-              <ion-card-content [style.fontSize]="fontSize + 'px'">
-                Si el niño ha sufrido una quemadura por fuego, retira inmediatamente la fuente de calor o apaga el fuego.
-                Enfría la zona afectada con agua fría durante al menos 20 minutos.
-                Si la quemadura es grave o afecta una gran área del cuerpo, llama de inmediato al servicio de emergencias.
-                Si la quemadura es leve, cubre la zona afectada con una gasa estéril y administra analgésicos para aliviar el dolor.
+              <ion-card-content class="ion-text-justify" [style.fontSize]="fontSize6 + 'px'">
+                Son las más leves y superficiales, como las quemaduras solares. La piel afectada
+                se vuelve enrojecida. El tratamiento consiste en enfriar la quemadura con agua
+                fría sin aplicar hielo. Después, se puede hidratar la zona con crema hidratante
+                o after sun. Estas quemaduras suelen curarse en unos días sin dejar cicatrices.
+                <br>
+                <br>
+                Quemaduras de primer grado:
+                <br>
+                <br>
+                1.- Enfría la quemadura con agua fría, evitando verter el agua directamente sobre la lesión.
+                <br>
+                2.- No apliques hielo, ya que puede causar más daño.
+                <br>
+                3.- Hidrata la zona afectada con crema hidratante o crema after sun.
+                <br>
+                4.- Las quemaduras de primer grado suelen curarse en tres a siete días sin dejar cicatriz.
+                <br>
+                <br>
+                <ion-item>
+                  <ion-thumbnail  slot="start">
+                    <img alt="Ambulancia" src="https://samu.cl/wp-content/uploads/2020/01/Logo-SAMU-Metropolitano.png"  class="imagen"/>
+                  </ion-thumbnail >
+                  <ion-label>
+                    <p>Ambulancia De Chile</p>
+                    <p>Teléfono : 131</p>
+                  </ion-label>
+                  <ion-button slots="end" href="tel:131" color="success">
+                    <ion-icon name="call-outline"></ion-icon>
+                  </ion-button>
+                </ion-item>
+              </ion-card-content >
+            </ion-card>
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>Audio de ayuda</ion-card-title>
+              </ion-card-header>
+              <ion-card-content class="ion-text-justify">
+                <audio controls class="audio-player">
+                  <source src="./../../../assets/Audios de cuidakids/QuemadurasDePrimerGrado.mp3" type="audio/mpeg">
+                  Tu dispositivo no soporta la etiqueta de audio.
+                </audio>
+              </ion-card-content >
+            </ion-card>
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>Video de ayuda</ion-card-title>
+              </ion-card-header>
+              <ion-card-content class="ion-text-justify">
+                <video  controls class="video-player" poster="https://cuidadoinfantil.com/wp-content/uploads/2018/02/tratamiento-quemaduras-bebe-805x510.jpg">
+                <source src="./../../../assets/VideoAyuda.mp4" type="video/mp4">
+                Tu dispositivo no soporta el elemento de video.
+              </video>
               </ion-card-content>
             </ion-card>
-
             <ion-card>
-              <ion-card-header>Audio Ayuda</ion-card-header>
-              <audio controls class="audio-player">
-                <source src="./../../../assets/Audios de cuidakids/quemaduras-por-fuego.mp3" type="audio/mpeg">
-                Tu navegador no soporta la etiqueta de audio.
-              </audio>
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <ion-button (click)="increaseFontSize8()" color="dark" fill="outline" expand="block">
+                      <ion-icon name="add-outline"></ion-icon>
+                      Aumentar
+                    </ion-button>
+                  </ion-col>
+                  <ion-col>
+                    <ion-button (click)="decreaseFontSize8()" color="dark" fill="outline" expand="block">
+                      <ion-icon name="remove-outline"></ion-icon>
+                      Disminuir
+                    </ion-button>
+                  </ion-col>
+                  <ion-col>
+                    <ion-button (click)="resetFontSize8()" color="dark" fill="outline" expand="block">
+                      <ion-icon name="refresh-outline"></ion-icon>
+                      Restablecer
+                    </ion-button>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+              <ion-card-header>
+                <ion-card-title>Quemaduras de segundo grado</ion-card-title>
+              </ion-card-header>
+              <ion-card-content class="ion-text-justify" [style.fontSize]="fontSize8 + 'px'">
+                Quemaduras de segundo grado: Se dividen en superficiales y profundas. Además de
+                afectar la epidermis, también alcanzan la dermis. Las quemaduras superficiales
+                presentan ampollas y un color rojo brillante. El tratamiento incluye enfriar la
+                quemadura con agua fría, evitando verter el agua directamente sobre las ampollas.
+                Es importante no reventar las ampollas, ya que protegen la piel durante la
+                regeneración de los tejidos. Estas quemaduras deben limpiarse, desinfectarse y
+                cubrirse como una herida. La curación lleva entre 7 y 10 días y puede dejar
+                una pequeña cicatriz. Las quemaduras de segundo grado profundas requieren atención
+                 médica especializada, ya que pueden necesitar injertos de piel.
+                 <br>
+                 <br>
+                 Quemaduras de segundo grado superficial:
+                <br>
+                <br>
+                1.- Enfría la quemadura con agua fría, evitando verter el agua directamente sobre la quemadura y las ampollas.
+                <br>
+                2.- Evita que el niño manipule o reviente las ampollas para proteger la piel y prevenir infecciones.
+                <br>
+                3.- Limpia y desinfecta la quemadura como una herida.
+                <br>
+                4.- Cubre la quemadura con un vendaje estéril.
+                <br>
+                5.- Estas quemaduras generalmente tardan entre siete y diez días en curarse, y pueden dejar una pequeña cicatriz.
+                <br>
+                <br>
+                Quemaduras de segundo grado profundo:
+                <br>
+                <br>
+                1.- En caso de quemaduras de segundo grado profundo, es necesario acudir a un especialista para su tratamiento.
+                <br>
+                2.- No revientes las ampollas y evita cualquier manipulación de la zona afectada.
+                <br>
+                3.- Estas quemaduras requieren cuidados especiales y a menudo pueden necesitar injertos de piel.
+                <br>
+                4.- La curación puede llevar de dos a tres semanas.
+                <br>
+                <br>
+                <ion-item>
+                  <ion-thumbnail  slot="start">
+                    <img alt="Ambulancia" src="https://samu.cl/wp-content/uploads/2020/01/Logo-SAMU-Metropolitano.png"  class="imagen"/>
+                  </ion-thumbnail >
+                  <ion-label>
+                    <p>Ambulancia De Chile</p>
+                    <p>Teléfono : 131</p>
+                  </ion-label>
+                  <ion-button slots="end" href="tel:131" color="success">
+                    <ion-icon name="call-outline"></ion-icon>
+                  </ion-button>
+                </ion-item>
+              </ion-card-content >
             </ion-card>
-
             <ion-card>
-              <ion-card-header>Video Referencia</ion-card-header>
-              <video class="video-player" controls class="video-player">
-                <source src="./../../../assets/Videos de CuidaKids/quemaduras-por-fuego.mp4" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
+              <ion-card-header>
+                <ion-card-title>Audio de ayuda</ion-card-title>
+              </ion-card-header>
+              <ion-card-content class="ion-text-justify">
+                <audio controls class="audio-player">
+                  <source src="./../../../assets/Audios de cuidakids/QuemadurasDeSegundoGrado.mp3" type="audio/mpeg">
+                  Tu dispositivo no soporta la etiqueta de audio.
+                </audio>
+              </ion-card-content >
+            </ion-card>
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>Video de ayuda</ion-card-title>
+              </ion-card-header>
+              <ion-card-content class="ion-text-justify">
+                <video  controls class="video-player" poster="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8WVkLyVI9veBdclbgA1Q7XF1yR4ryVqpdYgKcOSOBq0RPzYJg1l72REN4SpmI5L5BJ4g&usqp=CAU">
+                <source src="./../../../assets/VideoAyuda.mp4" type="video/mp4">
+                Tu dispositivo no soporta el elemento de video.
               </video>
+              </ion-card-content>
+            </ion-card>
+            <ion-card>
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <ion-button (click)="increaseFontSize9()" color="dark" fill="outline" expand="block">
+                      <ion-icon name="add-outline"></ion-icon>
+                      Aumentar
+                    </ion-button>
+                  </ion-col>
+                  <ion-col>
+                    <ion-button (click)="decreaseFontSize9()" color="dark" fill="outline" expand="block">
+                      <ion-icon name="remove-outline"></ion-icon>
+                      Disminuir
+                    </ion-button>
+                  </ion-col>
+                  <ion-col>
+                    <ion-button (click)="resetFontSize9()" color="dark" fill="outline" expand="block">
+                      <ion-icon name="refresh-outline"></ion-icon>
+                      Restablecer
+                    </ion-button>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+              <ion-card-header>
+                <ion-card-title>Quemaduras de tercer grado</ion-card-title>
+              </ion-card-header>
+              <ion-card-content class="ion-text-justify" [style.fontSize]="fontSize9 + 'px'">
+                Quemaduras de tercer grado:
+                <br>
+                <br>
+                Son las más graves y afectan todas las capas de la piel,
+                e incluso pueden dañar músculos y huesos. Se producen por sustancias químicas,
+                electricidad o contacto prolongado con líquidos calientes. La zona afectada presenta
+                un aspecto carbonizado, de color marrón oscuro o negro, y no presenta ampollas ni dolor
+                debido a la destrucción de los tejidos nerviosos. En estos casos, es necesario buscar
+                atención médica urgente o llamar al servicio de emergencias. Las quemaduras de tercer
+                grado requieren cuidados especiales y a menudo se realizan injertos de piel.
+                El tiempo de curación puede variar, pero generalmente lleva de dos a tres semanas,
+                con un riesgo significativo de empeoramiento y sobreinfección.
+                <br>
+                <br>
+                Quemaduras de tercer grado:
+                <br>
+                <br>
+                1.- Traslada al niño de inmediato a un centro hospitalario o llama al servicio de emergencias.
+                <br>
+                2.- Las quemaduras de tercer grado son graves y necesitan atención médica especializada.
+                <br>
+                3.- Evita manipular la zona afectada.
+                <br>
+                4.- Estas quemaduras generalmente requieren injertos de piel y pueden tardar varias semanas en curarse.
+                <br>
+                <br>
+                <ion-item>
+                  <ion-thumbnail  slot="start">
+                    <img alt="Ambulancia" src="https://samu.cl/wp-content/uploads/2020/01/Logo-SAMU-Metropolitano.png"  class="imagen"/>
+                  </ion-thumbnail >
+                  <ion-label>
+                    <p>Ambulancia De Chile</p>
+                    <p>Teléfono : 131</p>
+                  </ion-label>
+                  <ion-button slots="end" href="tel:131" color="success">
+                    <ion-icon name="call-outline"></ion-icon>
+                  </ion-button>
+                </ion-item>
+              </ion-card-content >
+            </ion-card>
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>Audio de ayuda</ion-card-title>
+              </ion-card-header>
+              <ion-card-content class="ion-text-justify">
+                <audio controls class="audio-player">
+                  <source src="./../../../assets/Audios de cuidakids/QuemadurasDeTercerGrado.mp3" type="audio/mpeg">
+                  Tu dispositivo no soporta la etiqueta de audio.
+                </audio>
+              </ion-card-content >
+            </ion-card>
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>Video de ayuda</ion-card-title>
+              </ion-card-header>
+              <ion-card-content class="ion-text-justify">
+                <video  controls class="video-player" poster="https://www.sumedico.com/u/fotografias/m/2019/6/14/f425x230-1918_15900_0.jpg">
+                <source src="./../../../assets/VideoAyuda.mp4" type="video/mp4">
+                Tu dispositivo no soporta el elemento de video.
+              </video>
+              </ion-card-content>
             </ion-card>
           </ion-content>
         </ng-template>

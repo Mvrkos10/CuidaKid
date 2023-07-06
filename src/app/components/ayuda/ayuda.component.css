@@ -15,3 +15,9 @@ ion-toolbar{
   white-space: normal; /* Permite que el texto se envuelva si es necesario */
 }
 
+.centered-button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
